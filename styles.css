@@ -1,3 +1,13 @@
+#container {
+    border: 5px solid blue;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+}
+
 div {
-    border: 2px solid red;
+    box-sizing: border-box;
+    border: 5px solid darkmagenta;
+    height: 120px;
+    width: 120px;
 }
