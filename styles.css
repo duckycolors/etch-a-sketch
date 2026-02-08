@@ -1,17 +1,33 @@
+#bigbigContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+#bigContainer {
+    display: flex;
+    justify-content: center;
+}
+
 #container {
     border: 5px solid blue;
     box-sizing: border-box;
-    width: auto;
-    height: auto;
+    width: 1000px;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
 }
 
-div {
+#div1 {
     box-sizing: border-box;
-    border: 5px solid darkmagenta;
-    height: 110px;
-    width: 110px;
+    border: 3px solid darkmagenta;
+    height: 5%;
+    width: 5%;
+}
+
+#div1:hover {
+    background-color: aquamarine;
 }
 
 input {
