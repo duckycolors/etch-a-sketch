@@ -1,3 +1,12 @@
+let divNumberX = 16;
+let divNumberY = 16;
+
 container = document.querySelector("#container");
-const div1 = document.createElement("div");
-container.appendChild(div1);
+
+
+for (i = 0; i < (divNumberX * divNumberY); i++) {
+  const div1 = document.createElement("div");
+  container.appendChild(div1);
+}
+
+
