@@ -6,21 +6,17 @@
 }
 
 #container {
-    border: 5px solid blue;
-    box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    margin: 100px auto;
+    background-color: aliceblue;
+    margin: 35px auto;
 }
 
-#div1 {
-    box-sizing: border-box;
-    border: 3px solid darkmagenta;
-    height: 5%;
-    width: 5%;
+.cell {
+    border: 1px solid gray;
 }
 
-#div1:hover {
+.cell:hover {
     background-color: aquamarine;
 }
 
