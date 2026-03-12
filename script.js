@@ -19,8 +19,13 @@ document.getElementById("btn").onclick = function() {
     gridCell.classList.add("cell");
 
     container.appendChild(gridCell);
-  }
 
+    gridCell.addEventListener("mousedown", changeGridColour)
+      
+  } 
+}
+function changeGridColour() {
+  this.style.backgroundColor = "red";
 }
 
 

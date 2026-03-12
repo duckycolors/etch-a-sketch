@@ -16,9 +16,9 @@
     border: 1px solid gray;
 }
 
-.cell:hover {
+/* .cell:hover {
     background-color: aquamarine;
-}
+} */
 
 input {
     margin: 10px 0px;
