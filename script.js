@@ -20,13 +20,15 @@ document.getElementById("btn").onclick = function() {
 
     container.appendChild(gridCell);
 
-    gridCell.addEventListener("mousedown", changeGridColour)
+    gridCell.addEventListener("mouseover", function(e) {
+        gridCell.style.backgroundColor = "red"
+    })
       
   } 
 }
-function changeGridColour() {
-  this.style.backgroundColor = "red";
-}
+// function changeGridColour() {
+//   this.style.backgroundColor = "red";
+// }
 
 
 
