@@ -5,6 +5,7 @@ let gridInputNumber = document.getElementById("gridNumberLabel");
 container = document.querySelector("#container");
 
 gridInput.value = 16;
+gridInputNumber.textContent = `Grid Number: ${gridInput.value}`;
 
 gridInput.addEventListener("input", function() {
   gridInputNumber.textContent = `Grid Number: ${gridInput.value}`;
