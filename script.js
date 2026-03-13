@@ -1,27 +1,25 @@
 GRIDLENGTH = 600;
 
-let rows = document.getElementById("inputX");
-let cols = document.getElementById("inputY");
+let gridInput = document.getElementById("gridNumber");
 container = document.querySelector("#container");
 
-rows.value = 16;
-cols.value = 16;
+gridInput.value = 16;
 
 container.style.width = `${GRIDLENGTH}px`
 container.style.height = `${GRIDLENGTH}px`
 
 document.getElementById("btn").onclick = function() {
-  for (i = 0; i < (rows.value * cols.value); i++) {
+  for (i = 0; i < (gridInput.value * gridInput.value); i++) {
     const gridCell = document.createElement("div");
     
-    gridCell.style.width = `${GRIDLENGTH / cols.value - 2}px`;
-    gridCell.style.height = `${GRIDLENGTH / rows.value - 2}px`;
+    gridCell.style.width = `${GRIDLENGTH / gridInput.value - 2}px`;
+    gridCell.style.height = `${GRIDLENGTH / gridInput.value - 2}px`;
     gridCell.classList.add("cell");
 
     container.appendChild(gridCell);
 
     gridCell.addEventListener("mouseover", function(e) {
-        gridCell.style.backgroundColor = "red"
+        gridCell.style.backgroundColor = "lightblue";
     })
       
   } 
