@@ -1,9 +1,14 @@
 GRIDLENGTH = 600;
 
 let gridInput = document.getElementById("gridNumber");
+let gridInputNumber = document.getElementById("gridNumberLabel");
 container = document.querySelector("#container");
 
 gridInput.value = 16;
+
+gridInput.addEventListener("input", function() {
+  gridInputNumber.textContent = `Grid Number: ${gridInput.value}`;
+});
 
 container.style.width = `${GRIDLENGTH}px`
 container.style.height = `${GRIDLENGTH}px`
@@ -21,7 +26,9 @@ document.getElementById("btn").onclick = function() {
     gridCell.addEventListener("mouseover", function(e) {
         gridCell.style.backgroundColor = "lightblue";
     })
-      
+    btn.addEventListener("click", function() {
+        gridCell.remove("gridCell");
+    });
   } 
 }
 // function changeGridColour() {
