@@ -1,3 +1,21 @@
+body {
+    background-color:whitesmoke;
+}
+
+h1 {
+    color:darkslateblue;
+    transition: 0.5s;
+}
+
+h1:hover {
+    color: crimson;
+    transition: 0.5s;
+}
+
+label {
+    color: darkslateblue;
+}
+
 #bigbigContainer {
     display: flex;
     flex-direction: column;
@@ -8,7 +26,7 @@
 #container {
     display: flex;
     flex-wrap: wrap;
-    background-color: aliceblue;
+    background-color: lightgray;
     margin: 35px auto;
 }
 
@@ -16,14 +34,23 @@
     border: 1px solid gray;
 }
 
-/* .cell:hover {
-    background-color: aquamarine;
-} */
-
-input {
+input[type="range"] {
     margin: 10px 10px 0px;
+    width: 200px;
 }
 
 button {
-    /* margin: 10px 0px; */
+    padding: 10px 20px;
+    background-color: darkgray;
+    color: white;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: gray;
+    transition: 0.2s;
+}
+
+select {
+    padding: 12.5px;
 }
