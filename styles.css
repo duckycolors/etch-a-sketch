@@ -27,7 +27,7 @@ label {
     display: flex;
     flex-wrap: wrap;
     background-color: lightgray;
-    margin: 35px auto;
+    margin: 10px auto;
 }
 
 .cell {
@@ -53,4 +53,16 @@ button:hover {
 
 select {
     padding: 12.5px;
+}
+
+#containertop {
+    border: 2px solid red;
+    display: flex;
+    justify-content: end;
+    width: 600px;
+    margin: 10px auto;
+}
+
+#containertop button {
+    margin-right: 10px;
 }
