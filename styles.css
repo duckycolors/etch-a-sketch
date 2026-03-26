@@ -65,4 +65,10 @@ select {
 
 #containertop button {
     margin-right: 10px;
+    background-image: url(images/rainbow.jpg);
+    background-size: cover;
+}
+
+#containertop button:active {
+    border: 2px solid deepskyblue;
 }
