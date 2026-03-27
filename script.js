@@ -6,12 +6,12 @@ let container = document.querySelector("#container");
 let colourSelector = document.querySelector("#colourselect");
 let colourButton = document.querySelector("#colourbutton");
 
-
-let r = Math.floor(Math.random() * 255)
-let g = Math.floor(Math.random() * 255)
-let b = Math.floor(Math.random() * 255)
-let colourValue = (`rgb(${r}, ${g}, ${b})`);
-console.log(colourValue);
+function randomColour () {
+  let r = Math.floor(Math.random() * 255)
+  let g = Math.floor(Math.random() * 255)
+  let b = Math.floor(Math.random() * 255)
+  return (`rgb(${r}, ${g}, ${b})`);
+}
 
 gridInput.value = 16;
 gridInputNumber.textContent = `Grid Number: ${gridInput.value}`;
@@ -72,13 +72,11 @@ document.getElementById("btn").onclick = function() {
     gridCell.classList.add("cell");
 
     container.appendChild(gridCell);
-
-    if(!colourButton.dataset.clicked) {
-      gridCell.addEventListener("mouseover", function(e) {
-        gridCell.style.backgroundColor = colourSelector.value;
+    
+    gridCell.addEventListener("mouseover", function(e) {
+      gridCell.style.backgroundColor = colourSelector.value;
     })
-    }
-
+  
     btn.addEventListener("click", function() {
         gridCell.remove("gridCell");
     });
