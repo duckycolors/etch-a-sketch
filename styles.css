@@ -63,12 +63,13 @@ select {
     margin: 10px auto;
 }
 
+p {
+    margin-right: 10px;
+}
+
 #containertop button {
     margin-right: 10px;
+    padding: 12.5px 40px;
     background-image: url(images/rainbow.jpg);
     background-size: cover;
 }
-
-/* #containertop button:active {
-    border: 2px solid deepskyblue;
-} */

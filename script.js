@@ -5,6 +5,7 @@ let gridInputNumber = document.getElementById("gridNumberLabel");
 let container = document.querySelector("#container");
 let colourSelector = document.querySelector("#colourselect");
 let colourButton = document.querySelector("#colourbutton");
+let rainbowText = document.querySelector("p");
 
 function randomColour () {
   let r = Math.floor(Math.random() * 255)
@@ -76,9 +77,23 @@ document.getElementById("btn").onclick = function() {
     gridCell.addEventListener("mouseover", function(e) {
       gridCell.style.backgroundColor = colourSelector.value;
     })
+
+    colourButton.addEventListener("click", function(e) {
+      gridCell.addEventListener("mouseover", function(e) {
+      gridCell.style.backgroundColor = randomColour();
+     })
+      colourButton.style.border = "2px solid deepskyblue";
+      colourButton.style.transition = "0.2s";
+      rainbowText.style.color = "deepskyblue";
+      rainbowText.style.transition = "0.2s";
+    })
   
     btn.addEventListener("click", function() {
         gridCell.remove("gridCell");
+        colourButton.style.border = "2px solid black";
+        colourButton.style.transition = "0.2s";
+        rainbowText.style.color = "black";
+        rainbowText.style.transition = "0.2s";
     });
   } 
 }
