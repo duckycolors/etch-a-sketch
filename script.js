@@ -91,9 +91,7 @@ document.getElementById("btn").onclick = function() {
     btn.addEventListener("click", function() {
         gridCell.remove("gridCell");
         colourButton.style.border = "2px solid black";
-        colourButton.style.transition = "0.2s";
         rainbowText.style.color = "black";
-        rainbowText.style.transition = "0.2s";
     });
   } 
 }
