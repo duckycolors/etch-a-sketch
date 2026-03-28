@@ -5,7 +5,8 @@ let gridInputNumber = document.getElementById("gridNumberLabel");
 let container = document.querySelector("#container");
 let colourSelector = document.querySelector("#colourselect");
 let colourButton = document.querySelector("#colourbutton");
-let rainbowText = document.querySelector("p");
+let darkText = document.querySelector("#darktext");
+let rainbowText = document.querySelector("#rainbowtext");
 
 function randomColour () {
   let r = Math.floor(Math.random() * 255)
