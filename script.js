@@ -77,6 +77,15 @@ document.getElementById("btn").onclick = function() {
     gridCell.classList.add("cell");
 
     container.appendChild(gridCell);
+
+    const overlay = document.createElement("div");
+    overlay.style.backgroundColor = "black";
+    overlay.style.opacity = 0;
+    
+    overlay.style.width = `${GRIDLENGTH / gridInput.value - 2}px`;
+    overlay.style.height = `${GRIDLENGTH / gridInput.value - 2}px`;
+    overlay.style.zIndex = "999";
+    gridCell.appendChild(overlay);
     
     gridCell.addEventListener("mouseover", function(e) {
       gridCell.style.backgroundColor = colourSelector.value;
@@ -94,17 +103,24 @@ document.getElementById("btn").onclick = function() {
 
     darkButton.addEventListener("click", function(e) {
       gridCell.addEventListener("mouseover", function(e) {
-        const currentOpacity = gridCell.style.opacity;
-        console.log("the current opacity is " + currentOpacity);
-        gridCell.style.backgroundColor = "black";
-        gridCell.style.opacity = parseFloat(gridCell.style.opacity) - 0.10;
+        const currentOpacity1 = gridCell.style.opacity;
+        const currentOpacity2 = overlay.style.opacity;
+        console.log("the gridCell current opacity is " + currentOpacity1);
+        console.log("the overlay current opacity is " + currentOpacity2);
+        overlay.style.opacity = parseFloat(overlay.style.opacity) + 0.10;
      })
+      darkButton.style.border = "2px solid deepskyblue";
+      darkButton.style.transition = "0.2s";
+      darkText.style.color = "deepskyblue";
+      darkText.style.transition = "0.2s";
     })
   
     btn.addEventListener("click", function() {
         gridCell.remove("gridCell");
         colourButton.style.border = "2px solid black";
         rainbowText.style.color = "black";
+        darkButton.style.border = "2px solid black";
+        darkText.style.color = "black";
     });
   } 
 }

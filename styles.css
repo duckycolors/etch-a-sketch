@@ -1,19 +1,20 @@
 body {
-    background-color:whitesmoke;
+    background-color: mediumpurple;
 }
 
 h1 {
-    color:darkslateblue;
+    color: yellow;
     transition: 0.5s;
+    font-family: 'Courier New', Courier, monospace
 }
 
 h1:hover {
-    color: crimson;
+    color: gold;
     transition: 0.5s;
 }
 
 label {
-    color: darkslateblue;
+    color: rebeccapurple;
 }
 
 #bigbigContainer {
@@ -28,6 +29,18 @@ label {
     flex-wrap: wrap;
     background-color: lightgray;
     margin: 10px auto;
+    border: 6px double darkviolet;
+}
+
+#imgcontainer {
+    width: auto;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    height: 500px;
 }
 
 .cell {
@@ -36,7 +49,26 @@ label {
 
 input[type="range"] {
     margin: 10px 10px 0px;
-    width: 200px;
+    width: 350px;
+    -webkit-appearance: none;
+    background-color: blueviolet;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 3px magenta;
+    transition: 0.2s;
 }
 
 button {
@@ -44,6 +76,16 @@ button {
     background-color: darkgray;
     color: white;
     transition: 0.2s;
+    cursor: pointer;
+}
+
+#btn {
+    background-color: yellow;
+    color: black;
+}
+
+#btn:active {
+    background-color: gold;
 }
 
 button:hover {
@@ -53,10 +95,17 @@ button:hover {
 
 select {
     padding: 12.5px;
+    background-color: indigo;
+    color: yellow;
+    transition: 0.5s;
+}
+
+select:hover {
+    background-color: darkorchid;
+    transition: 0.5s;
 }
 
 #containertop {
-    border: 2px solid red;
     display: flex;
     justify-content: end;
     width: 600px;
