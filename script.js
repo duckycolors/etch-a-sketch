@@ -30,7 +30,7 @@ gridInput.addEventListener("input", function() {
     gridInputNumber.style.transition = "0.5s";
   }
   if(gridInput.value >= 30) {
-    gridInputNumber.style.color = "goldenrod";
+    gridInputNumber.style.color = "yellow";
     gridInputNumber.style.transition = "0.5s";
   }
   if(gridInput.value >= 40) {

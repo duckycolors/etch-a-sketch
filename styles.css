@@ -82,15 +82,12 @@ button {
 #btn {
     background-color: yellow;
     color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
 }
 
 #btn:active {
     background-color: gold;
-}
-
-button:hover {
-    background-color: gray;
-    transition: 0.2s;
 }
 
 select {
