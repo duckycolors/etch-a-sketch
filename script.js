@@ -4,6 +4,7 @@ let gridInput = document.getElementById("gridNumber");
 let gridInputNumber = document.getElementById("gridNumberLabel");
 let container = document.querySelector("#container");
 let colourSelector = document.querySelector("#colourselect");
+let darkButton = document.querySelector("#darkbutton");
 let colourButton = document.querySelector("#colourbutton");
 let darkText = document.querySelector("#darktext");
 let rainbowText = document.querySelector("#rainbowtext");
@@ -68,7 +69,9 @@ container.style.height = `${GRIDLENGTH}px`
 document.getElementById("btn").onclick = function() {
   for (i = 0; i < (gridInput.value * gridInput.value); i++) {
     const gridCell = document.createElement("div");
-    
+    gridCell.style.backgroundColor = "lightgray";
+    gridCell.style.opacity = 1;
+
     gridCell.style.width = `${GRIDLENGTH / gridInput.value - 2}px`;
     gridCell.style.height = `${GRIDLENGTH / gridInput.value - 2}px`;
     gridCell.classList.add("cell");
@@ -87,6 +90,15 @@ document.getElementById("btn").onclick = function() {
       colourButton.style.transition = "0.2s";
       rainbowText.style.color = "deepskyblue";
       rainbowText.style.transition = "0.2s";
+    })
+
+    darkButton.addEventListener("click", function(e) {
+      gridCell.addEventListener("mouseover", function(e) {
+        const currentOpacity = gridCell.style.opacity;
+        console.log("the current opacity is " + currentOpacity);
+        gridCell.style.backgroundColor = "black";
+        gridCell.style.opacity = parseFloat(gridCell.style.opacity) - 0.10;
+     })
     })
   
     btn.addEventListener("click", function() {
